@@ -11,7 +11,7 @@ const api = axios.create({
 
 export const reviewCode = async (codeSnippet) => {
     try {
-        const response = await api.post('/review', { codeSnippet });
+        const response = await api.post('/api/review', { codeSnippet });
         return response.data;
     } catch (error) {
         console.error("Error during code review:", error);
