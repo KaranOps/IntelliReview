@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-
+@CrossOrigin(origins = "*") // Allow requests from any frontend (Render, localhost)
 public class ReviewController {
 
     private final ReviewService reviewService;
