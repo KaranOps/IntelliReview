@@ -13,11 +13,10 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:5173", "http://localhost:3000") // Allow Vite and CRA defaults
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*")
-                        .allowCredentials(true);
+                registry.addMapping("/**") // Apply to all endpoints
+                        .allowedOrigins("*") // Allow all origins (Render, localhost, etc.)
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allow all REST methods
+                        .allowedHeaders("*"); // Allow all headers
             }
         };
     }
