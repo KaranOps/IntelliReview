@@ -13,13 +13,13 @@ It's like having a teacher available 24/7 to check your coding homework!
 
 ---
 
-## 🏗️ Architecture Diagram
+## Architecture Diagram
 Here is how the system works:
 ```mermaid
 graph TD
     A[👤 User] -->|Writes Code| B[🖥️ Frontend<br/>React + Vite]
     B -->|Sends Code via HTTP| C[⚙️ Backend<br/>Spring Boot]
-    C -->|Requests Review| D[🤖 Groq AI API]
+    C -->|Requests Review| D[Groq AI API]
     D -->|Returns Feedback| C
     C -->|Sends Review| B
     B -->|Shows Result| A
@@ -36,7 +36,7 @@ graph TD
 
 ---
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 Follow these steps to run the app on your computer.
 
