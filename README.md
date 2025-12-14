@@ -15,15 +15,19 @@ It's like having a teacher available 24/7 to check your coding homework!
 
 ## 🏗️ Architecture Diagram
 Here is how the system works:
-
 ```mermaid
 graph TD
-    User((User)) -->|Writes Code| Frontend[Frontend (React + Vite)]
-    Frontend -->|Sends Code| Backend[Backend (Spring Boot)]
-    Backend -->|Asks for Review| API[Groq AI API]
-    API -->|Returns Feedback| Backend
-    Backend -->|Sends Review| Frontend
-    Frontend -->|Shows Result| User
+    A[👤 User] -->|Writes Code| B[🖥️ Frontend<br/>React + Vite]
+    B -->|Sends Code via HTTP| C[⚙️ Backend<br/>Spring Boot]
+    C -->|Requests Review| D[🤖 Groq AI API]
+    D -->|Returns Feedback| C
+    C -->|Sends Review| B
+    B -->|Shows Result| A
+    
+    style A fill:#4f46e5,stroke:#312e81,stroke-width:2px,color:#fff
+    style B fill:#06b6d4,stroke:#0e7490,stroke-width:2px,color:#fff
+    style C fill:#10b981,stroke:#047857,stroke-width:2px,color:#fff
+    style D fill:#f59e0b,stroke:#b45309,stroke-width:2px,color:#fff
 ```
 
 1.  **Frontend**: The website part you see (built with React).

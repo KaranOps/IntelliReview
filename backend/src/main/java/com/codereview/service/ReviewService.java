@@ -106,16 +106,16 @@ public class ReviewService {
 
                 Analyze the provided code and structure your response EXACTLY as follows using Markdown:
 
-                ## 📊 Summary
+                ## Summary
                 A brief, encouraging summary of what the code does and its overall quality.
 
-                ## 🔍 Code Review
+                ## Code Review
                 Use a bulleted list to clearly explain syntax errors, logic bugs, or improvements. Explain *why* something is wrong or could be better, avoiding complex jargon. Focus on readability.
 
-                ## ✨ Refactored Code
+                ## Refactored Code
                 Provide the corrected version of the code. Ensure it is clean, readable, and uses beginner-friendly syntax.
 
-                ## 💡 Key Takeaways
+                ## Key Takeaways
                 One or two simple tips for the user to remember for next time.
                 """;
 
